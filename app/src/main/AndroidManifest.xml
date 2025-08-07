@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mt"
+        tools:targetApi="31">
+
+        <!-- MainActivity (default launcher) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ✅ RegisterActivity added -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+        <activity
+            android:name=".activity.AddMoneyActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+        <activity
+            android:name=".activity.SendMoneyActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+        <activity
+            android:name=".activity.CashOutActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+        <activity
+            android:name=".activity.TransactionHistoryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+        <activity
+            android:name=".activity.RechargeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mt" />
+
+
+
+    </application>
+
+</manifest>

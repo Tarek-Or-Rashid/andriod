@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Payment Type Dropdown -->
+    <Spinner
+        android:id="@+id/paymentTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown" />
+
+    <!-- Receiver ID -->
+    <EditText
+        android:id="@+id/receiverInput"
+        android:hint="Receiver ID or Merchant Name"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Receiver Account Number -->
+    <EditText
+        android:id="@+id/accountInput"
+        android:hint="Account Number"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <!-- User Password -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:hint="Your Password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Amount -->
+    <EditText
+        android:id="@+id/amountInput"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Pay Button -->
+    <Button
+        android:id="@+id/btnPay"
+        android:text="Make Payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"/>
+</LinearLayout>
