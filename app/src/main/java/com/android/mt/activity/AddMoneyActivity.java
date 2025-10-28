@@ -72,12 +72,12 @@ public class AddMoneyActivity extends AppCompatActivity {
             // Add transaction record
             Transaction transaction = new Transaction();
             transaction.setType("Add Money");
-            transaction.setSenderId(currentUser.getId());  // sender and receiver can be same
+            transaction.setSenderId(currentUser.getId()); 
             transaction.setReceiverId(currentUser.getId());
             transaction.setAmount(amount);
             transaction.setCharge(0);
             transaction.setDateTime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date()));
-             // Save bank/card number as source
+          
 
             dbHelper.insertTransaction(transaction);
 
