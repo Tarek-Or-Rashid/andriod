@@ -52,7 +52,7 @@ public class CashOutActivity extends AppCompatActivity {
             return;
         }
 
-        // পাসওয়ার্ড যাচাই (ধরি User মডেলে getPassword() আছে)
+       
         if (!inputPassword.equals(currentUser.getPassword())) {
             Toast.makeText(this, "Incorrect password", Toast.LENGTH_SHORT).show();
             return;
@@ -77,9 +77,9 @@ public class CashOutActivity extends AppCompatActivity {
             return;
         }
 
-        // Calculate charge (10 per 1000)
+        
         double charge = (amount / 1000.0) * 10;
-        charge = Math.round(charge * 100.0) / 100.0; // Round to 2 decimals
+        charge = Math.round(charge * 100.0) / 100.0; 
 
         double totalDeduction = amount + charge;
 
@@ -99,7 +99,7 @@ public class CashOutActivity extends AppCompatActivity {
         double agentProfit = (charge / 10.0) * 4.0;
         double adminProfit = (charge / 10.0) * 6.0;
 
-        // Final credit to agent = amount + agentProfit
+        
         double agentReceiveAmount = amount + agentProfit;
 
         // Update balances
@@ -107,7 +107,7 @@ public class CashOutActivity extends AppCompatActivity {
         dbHelper.updateBalance(agentUser.getId(), agentUser.getBalance() + agentReceiveAmount);
         dbHelper.updateBalance(adminUser.getId(), adminUser.getBalance() + adminProfit);
 
-        // Get current datetime
+       
         String dateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
 
         // Log transaction
