@@ -20,7 +20,7 @@ public class DashboardActivity extends AppCompatActivity {
     DBHelper dbHelper;
     User currentUser;
 
-    String currentUserPhone;  // Passed from login
+    String currentUserPhone;  
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         btnSendMoney.setOnClickListener(v -> {
             Intent intent = new Intent(DashboardActivity.this, SendMoneyActivity.class);
-            intent.putExtra("SENDER_PHONE", currentUserPhone);  // pass current user's phone
+            intent.putExtra("SENDER_PHONE", currentUserPhone); 
             startActivity(intent);
         });
 
